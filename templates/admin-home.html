@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div>This is admin-home</div>
+<a class="btn btn-primary" data-toggle="collapse" href="#add-dog" role="button" aria-expanded="false" aria-controls="add-dog">Add Dog</a>
+
+<div class="collapse" id="add-dog">
+  <form action="/add-dog" method="POST">
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Dog Names</label>
+      <input type="name" name="name" class="form-control" id="exampleFormControlInput1">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Sex</label>
+      <select class="form-control" id="exampleFormControlSelect1" name="sex">
+        <option>Male</option>
+        <option>Female</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Availability</label>
+      <select class="form-control" id="exampleFormControlSelect1" name="availability">
+        <option>Available</option>
+        <option>Sold</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Description</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+{% endblock %}
